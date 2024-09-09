@@ -1,0 +1,192 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="men">Continue shopping</a>
+        </nav>
+    </header>
+
+    <div id="cart-items"></div>
+
+    <footer>
+        <div id="cart-total"></div>
+        <button id="checkout-btn">Check out</button>
+    </footer>
+
+    
+     <script defer src="js/cart.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- bayez -->
+
+<!-- //wdwdwdwdwdwdwdwdwdwd -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="men.html">Continue shopping</a>
+        </nav>
+    </header>
+
+    <div id="cart-items"></div>
+
+    <footer>
+        <div id="cart-total"></div>
+        <button id="checkout-btn">Check out</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartContainer = document.getElementById('cart-items');
+
+            function updateCartTotal() {
+                const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                document.getElementById('cart-total').innerText = `Subtotal: ${total.toFixed(2)} LE`;
+            }
+
+            function renderCart() {
+                cartContainer.innerHTML = ''; // Clear the container
+                cartItems.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <p>${item.name} - Size: ${item.size}</p>
+                            <p>${item.price.toFixed(2)} LE</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn decrease" data-index="${index}">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" min="1">
+                                <button class="quantity-btn increase" data-index="${index}">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-btn" data-index="${index}">🗑</button>
+                    `;
+                    cartContainer.appendChild(cartItem);
+                });
+                updateCartTotal();
+            }
+
+            renderCart();
+
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.dataset.index;
+                    const cartItem = cartItems[index];
+                    const quantityInput = this.parentNode.querySelector('.quantity-input');
+                    let currentQuantity = parseInt(quantityInput.value);
+
+                    if (this.classList.contains('increase')) {
+                        cartItem.quantity = currentQuantity + 1;
+                    } else if (this.classList.contains('decrease')) {
+                        if (currentQuantity > 1) {
+                            cartItem.quantity = currentQuantity - 1;
+                        } else {
+                            cartItems.splice(index, 1); // Remove the item if quantity is zero
+                        }
+                    }
+
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    renderCart(); // Re-render the cart
+                });
+            });
+
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.dataset.index;
+                    cartItems.splice(index, 1); // Remove the item from the array
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    renderCart(); // Re-render the cart
+                });
+            });
+
+            document.getElementById('checkout-btn').addEventListener('click', function() {
+                window.location.href = 'checkout.html'; // Redirect to the checkout page
+            });
+        });
+    </script>
+</body>
+</html> -->

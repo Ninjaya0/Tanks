@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "serious-habitat-434821-m8",
+  "private_key_id": "741e67c30655bd16f3baae1634556a7e45cca593",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9Sip6bjazaQV0\nN6Zmz3DYN68VOPi4ElJo1gdXcUtAJ9mNJ5uOaibSBdGVZOXgHlMyuLkbrYVHiigM\na87BTsV1e5XggEby3VOwa12323ISiBJsEL4p+ZCUdPpW9Ygw9hetxjNFYW2yPKFN\no2bEPpu1s9Ja6WBqZkRvJzqBJ6wvqX86INsO/hr7r0jF5MGtUNK4mAD9HVzCBWme\nGd5kMaLTyzrjHGXKPwJAKQl1F5ewEZR/djApp/xt4ifpt9v0aTb6mghkJN2/wVZN\nCZNYXavWlkYlXSrAMt0m74K1qTEqzGDoOiEzNWEScPL8RxG3HS6NWi6EObX3zlcb\nOs+k9TKpAgMBAAECggEAD6BBXrM9uoSNTdVgvBy8i+rX3hyCgr6HdU5S05P/kmuf\nvNRz1dc7Pmv6y9aFGAHk3Btt84QY7CmSagkVy7UvHYZO3nY0dSzScW5BkbGQyokX\nXTqqGiC3H9xCxL426JTOKlsh5SS4d6Xj6nr2WzWwaLjwIO9iVVI9LMBcJuiRoSr8\nWv8/pEMaReKXxA2YCQPUydkU6kCIbcahdxxW/nt2Bo1vSMKv4CIktn8NhEuIJ455\nAQYggox2WN97GUg9zEGskrS+ybh4RuforukVlXCZg+/n2vTqSK/leKL7i8pMcIRv\ndVQFR9VH3+LxKnTSJnNQXtNaPh2rbxzhf/5rvmSvwQKBgQDmYQqzGZVUs9UZzv5S\nVgqpQA6KQ9Urr+8EK0qdmGYUmDSHw4iUpzIO07fWrNzYVsj5/PQxxqrw8YSXpc91\n5nL6j2lARB1l2IA12lCp++TkSmLoAuMNbrv1hFsFC6YvRnEME4K29cx13WOeyKIR\nOeuOa+0GQmRSwOu/looqAzH16QKBgQDSV0xdapmlrDo7tb43PU1sQjQZqWQsEF0L\nIqAeZdxpmf9LJif0FxuOU5fc731ndL7/eehHAC60cGVlZ98k4Qo9/GP/ozC2b1iR\nph2QiXgW7c4ajWeJVgWudG3DguX799idWiHrFXC9fU32uPo2P3rrNnqEAPCrmsKN\nQY91nj2ewQKBgQChcQO0eoshLlx5l4q1XEJgVNlbnyl1UfbnLwc85R0z9W1qbmX5\n9iioJ0m/EKg6mqaAOPlPIG+OJVHLi5CUiIeuem1Bcfo/8rX2ByVb2X+PU2l4OP2v\n3hetd7DpGj69BloWIl4JpLpBJoG3NdYMyFAAIDWbm07+ht8uBWqRAmgycQKBgGGU\n5nSgM8/MauewlSKDahvDSvBsyXA31zKHSclQcET9kJaIiRiQb9RDq7xvzrnkS4ey\nQrRNvV0wl5nH6pntXRcMtEewqbS5S1mmuyiG3hOlF2zyFQp9wf0BPrrpS1Dt1qyJ\nWBr7w2Xlb/n6Lvpj0N62U3hSB1VVYtStiaSDWQsBAoGBAK96asmM1FuExxhfC+iL\nlOATQtfPMIY7Edum9VKedBo0ZmBXd5KIbDZLVuWW196FuO9BHGuwTeZuE6BqbbQl\n9yNjXPSD17PFbtgWlux7RexXFjW6LUvIxDXT9tBR9wE61SptamaQoKb8dzbpLRyf\nMRY1ydtbtVLaOoH7zMEefE5I\n-----END PRIVATE KEY-----\n",
+  "client_email": "ziad-4@serious-habitat-434821-m8.iam.gserviceaccount.com",
+  "client_id": "111840960399587120318",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ziad-4%40serious-habitat-434821-m8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

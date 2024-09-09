@@ -1,0 +1,333 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Replace Arial with Arian if needed */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between the logo and the text */
+}
+
+
+
+
+/* Target the cart image in the header and resize it */
+header img {
+    width: 27px; /* Set the desired width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+.menu-icon {
+    font-size: 48px; 
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Side Menu Styles */
+.side-menu {
+    height: 100%; /* Full height */
+    width: 0; /* Initially hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0; /* Slide in from the right */
+    background-color: black; /* Background color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Animation duration */
+    padding-top: 60px; /* Padding from top */
+    text-align: left;
+}
+
+.side-menu a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid white; /* Add border between menu items */
+}
+
+.side-menu a:hover {
+    color: gray; /* Change color on hover */
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Ensure the main content does not overflow */
+body {
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.shop-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.shop-button {
+    background-color: #efefe9; /* Cream white color */
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover,
+.shop-button:active
+ {
+    background-color: purple;
+    color: #efefe9;
+}
+
+
+/* Best Sellers Section */
+.best-sellers {
+    text-align: center;
+    padding: 20px;
+}
+
+.best-sellers h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.product {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+}
+
+.product img,
+.product video {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.product-image-left {
+    transform: translateX(-100%);
+}
+
+.product-image-right {
+    transform: translateX(100%);
+}
+
+.product-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Introductory Text */
+.intro-text {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Updates Section */
+.updates {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 40px;
+}
+
+.updates h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.updates form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updates label,
+.updates input[type="email"],
+.updates button {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+.updates button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.updates button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        font-size: 25px;
+    }
+
+    .hero img {
+        max-height: 400px;
+    }
+
+    .shop-buttons {
+        flex-direction: column;
+        transform: translateX(-50%);
+    }
+
+    .shop-button {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .products-container {
+        flex-direction: column;
+    }
+
+    .product {
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .updates {
+        padding: 15px;
+    }
+
+    .updates h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .product img,
+    .product video {
+        max-width: 100%;
+    }
+
+    .shop-button {
+        padding: 10px 20px;
+    }
+
+    .intro-text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .updates h2 {
+        font-size: 20px;
+    }
+}
+
+
+
