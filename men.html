@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="css/men.css">
+</head>
+<body>
+    <header>
+        <h1>Men shop</h1>
+        <nav>
+            <!-- <a href="#"><img src="images/cart.png" alt="Cart"></a> -->
+            <a href="cart"><img src="images/cart.png" alt="Cart" class="cart-icon"> <span id="cart-count"></span></a>
+
+            <a href="#" class="menu-icon">☰</a>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-menu">
+        <a href="" class="close-btn">&times;</a>
+        <a href="/">HOME</a>
+        <a href="men">Men shop</a>
+        <a href="women">Women shop</a>
+        <!-- <a href="#">SUMMER SWEATPANTS</a>
+        <a href="#">CARGOS</a>
+        <a href="#">HOODIES</a>
+        <a href="#">CREWNECKS</a> -->
+    </div>
+    <!-- awel sura -->
+    <div class="product-card">
+        <img src="images/tank.jpg" alt="Emerald Ribbed Tank Top">
+        <p class="product-name">TANK TOP (EMERALD)</p>
+        <p class="product-price">325.00 LE</p>
+        <div class="product-options">
+            <label for="size-select">Size:</label>
+            <select class="size-select" name="size" id="size-select">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+        </div>
+
+        <div class="quantity-selector">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="quantity-btn increase">+</button>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (EMERALD)" data-product-price="325.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (EMERALD)" data-product-price="325.00 LE">Buy it now</button>
+    </div>
+
+
+
+    <!-- tany sura -->
+
+    <!-- <div class="product-card">
+        <img src="images/tank3.png" alt="Black Ribbed Tank Top">
+        <p class="product-name">TANK TOP (BLACK)</p>
+        <p class="product-price">325.00 LE</p>
+        <div class="product-options">
+            <label for="size-select-black">Size:</label>
+            <select class="size-select" name="size" id="size-select-black">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (BLACK)" data-product-price="325.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (BLACK)" data-product-price="325.00 LE">Buy it now</button>
+    </div> -->
+
+
+<div class="product-card">
+    <img src="images/tank3.png" alt="Black Ribbed Tank Top">
+    <p class="product-name">TANK TOP (BLACK)</p>
+    <p class="product-price">325.00 LE</p>
+    <div class="product-options">
+        <label for="size-select-black">Size:</label>
+        <select class="size-select" name="size" id="size-select-black">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+    </div>
+    <div class="quantity-selector">
+        <button class="quantity-btn decrease">-</button>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="quantity-btn increase">+</button>
+    </div>
+    <button class="add-to-cart-btn" data-product-name="TANK TOP (BLACK)" data-product-price="325.00 LE">Add to cart</button>
+    <button class="buy-now-btn" data-product-name="TANK TOP (BLACK)" data-product-price="325.00 LE">Buy it now</button>
+</div>
+
+
+
+
+
+    <!-- talet sura -->
+    <div class="product-card">
+        <img src="images/tank3.png" alt="Vanilla Ribbed Tank Top">
+        <p class="product-name">TANK TOP (VANILLA)</p>
+        <p class="product-price">325.00 LE</p>
+        <div class="product-options">
+            <label for="size-select-vanilla">Size:</label>
+            <select class="size-select" name="size" id="size-select-vanilla">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+        </div>
+
+        <div class="quantity-selector">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="quantity-btn increase">+</button>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (VANILLA)" data-product-price="325.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (VANILLA)" data-product-price="325.00 LE">Buy it now</button>
+    </div>
+    
+
+
+
+
+
+
+
+
+    
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images/tank.jpg" alt="Emerald Ribbed Tank Top">
+            <p class="product-name">TANK TOP (EMERALD)</p>
+            <p class="product-price">325.00 LE</p>
+        </div>
+
+        
+        <div class="product-card">
+            <img src="images/tank3.png" alt="Black Ribbed Tank Top">
+            <p class="product-name">TANK TOP (BLACK)</p>
+            <p class="product-price">325.00 LE</p>
+        </div>
+        <div class="product-card">
+            <img src="images/tank3.png" alt="Vanilla Ribbed Tank Top">
+            <p class="product-name">TANK TOP (VANILLA)</p>
+            <p class="product-price">325.00 LE</p>
+        </div>
+        
+    </div>
+    <script src="js/men.js"></script>
+</body>
+</html>
