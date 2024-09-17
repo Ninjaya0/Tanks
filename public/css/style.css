@@ -240,27 +240,7 @@ body {
     background-color: #333;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-}
 
-.footer-menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-}
-
-.footer-menu a:hover {
-    text-decoration: underline;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 10px;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -331,3 +311,69 @@ footer {
 
 
 
+/* Swipe out animation (image disappears) */
+.swipe-left-out {
+    animation: swipe-left-out 0.5s forwards;
+}
+
+/* Swipe in animation (new image appears) */
+.swipe-left-in {
+    animation: swipe-left-in 0.5s forwards;
+}
+
+/* Keyframes for swipe left-out */
+@keyframes swipe-left-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Keyframes for swipe left-in */
+@keyframes swipe-left-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+footer h3, footer p {
+    color: black; /* Set text color to black */
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically, if needed */
+    margin-top: 10px; /* Optional: Adds space above the menu */
+}

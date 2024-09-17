@@ -80,31 +80,25 @@ nav a {
 /* edwefwefwefewfewfeefwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
 
 
-/* Policies Section Styling */
+/* Adjusted CSS for Policies Section */
 .policies {
     padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 800px; /* Adjust the width for better spacing */
+    margin: 20px auto; /* Centers the section horizontally */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align the text */
+    /* font-weight: bold; Make the font bold */
+    padding-left: 40px; /* Add space on the left */
+    padding-right: 40px; /* Add space on the right */
 }
 
 .policies p {
     font-size: 18px;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.policies ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.policies ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
     color: #333;
+    margin: 0; /* Ensure no spacing between the lines */
+    line-height: 1.6; /* Optional: Adjust line height for readability */
 }
 
 /* General Page Styling */
@@ -119,4 +113,47 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between the logo and the text */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+footer h3, footer p {
+    color: black; /* Set text color to black */
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically, if needed */
+    margin-top: 10px; /* Optional: Adds space above the menu */
 }

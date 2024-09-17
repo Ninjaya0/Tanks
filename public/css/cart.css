@@ -273,3 +273,15 @@ header nav a {
     padding: 0;
     line-height: 30px; /* Center text vertically */
 }
+
+#cart-total {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the subtotal in the middle */
+    display: flex;
+    justify-content: center;
+}
+
+#cart-total p {
+    text-align: right; /* Right-align the content inside the subtotal */
+}

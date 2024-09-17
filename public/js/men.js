@@ -267,3 +267,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sizeChartBtns = document.querySelectorAll('.size-chart-btn');
+    sizeChartBtns.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const sizeChartImage = this.nextElementSibling.querySelector('.size-chart');
+            // Toggle the visibility of the size chart
+            if (sizeChartImage.style.display === 'none' || sizeChartImage.style.display === '') {
+                sizeChartImage.style.display = 'block';
+            } else {
+                sizeChartImage.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+document.querySelectorAll('.quantity-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const quantityInput = this.parentNode.querySelector('.quantity-input');
+        let currentQuantity = parseInt(quantityInput.value);
+
+        if (this.classList.contains('increase')) {
+            quantityInput.value = currentQuantity + 1;
+        } else if (this.classList.contains('decrease')) {
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+    });
+});

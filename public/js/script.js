@@ -57,3 +57,32 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Run on page load in case the element is already visible
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = ["images/tank.jpg", "images/tank2.jpg", "images/tank3.png"];
+    let currentIndex = 0;
+    const heroImage = document.getElementById('hero-image');
+
+    // Function to change the image with swipe animation
+    function changeImage() {
+        // Add swipe-out class
+        heroImage.classList.add("swipe-left-out");
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            heroImage.src = images[currentIndex];
+
+            // Remove swipe-out class and add swipe-in class
+            heroImage.classList.remove("swipe-left-out");
+            heroImage.classList.add("swipe-left-in");
+        }, 500); // Duration of the swipe out
+
+        // Remove swipe-in class after animation completes
+        setTimeout(() => {
+            heroImage.classList.remove("swipe-left-in");
+        }, 1000); // Duration of the swipe in
+    }
+
+    setInterval(changeImage, 5000); // Change image every 5 seconds
+});

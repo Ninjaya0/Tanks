@@ -8,6 +8,10 @@
 </head>
 <body>
     <header>
+        <div class="logo-container"></div>
+        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <!-- <h1>Tanks</h1> -->
+    </div>
         <h1>women</h1>
         <nav>
             <a href="cart"><img src="images/cart.png" alt="Cart"></a>
@@ -16,17 +20,171 @@
     </header>
 
     <div id="side-menu" class="side-menu">
-        <a href="#" class="close-btn">&times;</a>
+        <a href="" class="close-btn">&times;</a>
         <a href="/">HOME</a>
         <a href="men">Men shop</a>
         <a href="women">Women shop</a>
+        <a href="policy">Our policy</a> 
         <!-- <a href="#">SUMMER SWEATPANTS</a>
         <a href="#">CARGOS</a>
         <a href="#">HOODIES</a>
         <a href="#">CREWNECKS</a> -->
     </div>
 
-    <div class="product-grid">
+
+
+    <div class="product-card">
+        <img src="images/tank.jpg" alt="Emerald Ribbed Tank Top">
+        <p class="product-name">White Crewneck Tank Top</p>
+
+
+        <p class="product-price">
+            <span class="old-price">385.00 LE</span> 
+            <span class="discount-label">15% off</span>
+            <span class="new-price">335.00 LE</span>
+        </p>
+        
+
+        <div class="product-options">
+            <label for="size-select">Size:</label>
+            <select class="size-select" name="size" id="size-select">
+                <option value="XS">X-Small</option> 
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+
+
+
+
+            
+            <button class="size-chart-btn">Size Chart</button> <!-- Add the Size Chart button -->
+            <div class="size-chart-container">
+                <img src="images/size-chart.jpg" alt="Size Chart" class="size-chart" style="display: none;">
+            </div>
+            </select>
+        </div>
+        <div class="quantity-selector">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="quantity-btn increase">+</button>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (EMERALD)" data-product-price="335.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (EMERALD)" data-product-price="335.00 LE">Buy it now</button>
+    </div>
+
+
+
+
+
+    <!-- tany sura -->
+
+   
+
+
+    <div class="product-card">
+        <img src="images/tank3.png" alt="Black Ribbed Tank Top">
+        <p class="product-name"> Black Crewneck Tank Top</p>
+
+
+        <p class="product-price"></p>
+            <span class="old-price">385.00 LE</span> 
+            <span class="discount-label">15% off</span>
+            <span class="new-price">335.00 LE</span>
+        </p>
+
+
+
+
+
+        <div class="product-options">
+            <label for="size-select-black">Size:</label>
+            <select class="size-select" name="size" id="size-select-black">
+                <option value="XS">X-Small</option> 
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+    
+            <button class="size-chart-btn">Size Chart</button> <!-- Add the Size Chart button -->
+            <div class="size-chart-container">
+                <img src="images/size-chart.jpg" alt="Size Chart" class="size-chart" style="display: none;">
+            </div>
+        </div>
+    
+        <div class="quantity-selector">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="quantity-btn increase">+</button>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (BLACK)" data-product-price="335.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (BLACK)" data-product-price="335.00 LE">Buy it now</button>
+    </div>
+
+
+
+
+
+    <!-- talet sura -->
+    <div class="product-card">
+        <img src="images/tank3.png" alt="Vanilla Ribbed Tank Top">
+        <p class="product-name">pink Crewneck Tank Top</p>
+
+
+
+        <p class="product-price">
+            <span class="old-price">385.00 LE</span> 
+            <span class="discount-label">15% off</span>
+            <span class="new-price">335.00 LE</span>
+        </p>
+
+
+
+
+        <div class="product-options">
+            <label for="size-select-vanilla">Size:</label>
+            <select class="size-select" name="size" id="size-select-vanilla">
+                <option value="XS">X-Small</option> 
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+    
+            <button class="size-chart-btn">Size Chart</button> <!-- Add the Size Chart button -->
+            <div class="size-chart-container">
+                <img src="images/size-chart.jpg" alt="Size Chart" class="size-chart" style="display: none;">
+            </div>
+        </div>
+    
+        <div class="quantity-selector">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="quantity-btn increase">+</button>
+        </div>
+        <button class="add-to-cart-btn" data-product-name="TANK TOP (VANILLA)" data-product-price="335.00 LE">Add to cart</button>
+        <button class="buy-now-btn" data-product-name="TANK TOP (VANILLA)" data-product-price="335.00 LE">Buy it now</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="product-grid">
         <div class="product-card">
             <img src="images/tank.jpg" alt="Emerald Ribbed Tank Top">
             <p class="product-name">TANK TOP (EMERALD)</p>
@@ -47,7 +205,32 @@
             <p class="product-name">Tank Top (NAVY)</p>
             <p class="product-price">325.00 LE</p>
         </div>
-    </div>
+    </div> -->
+
+
+
+
+    <footer>
+        <h3>Contact Info</h3>
+        <p>Email: youssefsherif005@gmail.com</p>
+        <p>Tel: 01205855612</p>
+        <nav class="footer-menu">
+            <a href="#">About</a>
+            <a href="#">Privacy policy</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/login"><img src="images/tiktok.png" alt="TikTok"></a>
+        </div>
+
+
+
+
+
+
+
+
     <script src="js/wo.js"></script>
 </body>
 </html>

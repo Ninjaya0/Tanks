@@ -331,3 +331,66 @@ nav a {
     border-radius: 5px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between the logo and the text */
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+footer h3, footer p {
+    color: black; /* Set text color to black */
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically, if needed */
+    margin-top: 10px; /* Optional: Adds space above the menu */
+}
+
+
+/* Price Styling */
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.discount-label {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
