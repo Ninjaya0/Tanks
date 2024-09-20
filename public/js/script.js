@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const images = ["images/tank.jpg", "images/tank2.jpg", "images/tank3.png"];
+    const images = ["images/g2.jpeg", "images/g3.jpeg", "images/g1.jpeg"];
     let currentIndex = 0;
     const heroImage = document.getElementById('hero-image');
 

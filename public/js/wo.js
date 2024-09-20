@@ -299,3 +299,59 @@ document.querySelectorAll('.quantity-btn').forEach(button => {
         }
     });
 });
+
+
+
+
+// Track current index for each slider separately
+let currentIndices = {
+    1: 0, // First slider
+    2: 0, // Second slider
+    3: 0  // Third slider
+};
+
+// Function to show the slide for the given slider and index
+function showSlide(sliderId, index) {
+    const slider = document.querySelector(`#slider${sliderId}`);
+    const slides = slider.querySelectorAll('img');
+    
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+// Next slide function
+function nextSlide(sliderId) {
+    const slides = document.querySelectorAll(`#slider${sliderId} img`);
+    currentIndices[sliderId] = (currentIndices[sliderId] + 1) % slides.length;
+    showSlide(sliderId, currentIndices[sliderId]);
+}
+
+// Previous slide function
+function prevSlide(sliderId) {
+    const slides = document.querySelectorAll(`#slider${sliderId} img`);
+    currentIndices[sliderId] = (currentIndices[sliderId] - 1 + slides.length) % slides.length;
+    showSlide(sliderId, currentIndices[sliderId]);
+}
+
+// Swipe functionality for mobile
+document.querySelectorAll('.slider').forEach((slider, index) => {
+    let startX;
+    const sliderId = index + 1;
+    
+    slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+            nextSlide(sliderId);
+        } else if (endX - startX > 50) {
+            prevSlide(sliderId);
+        }
+    });
+});

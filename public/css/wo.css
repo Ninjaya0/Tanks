@@ -395,3 +395,44 @@ footer h3, footer p {
     font-size: 18px;
     font-weight: bold;
 }
+
+
+
+/* Basic slider container */
+.slider {
+    position: relative;
+    max-width: 100%; /* Adjust to your container width */
+    margin: auto;
+}
+
+.slider img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.slider img.active {
+    display: block;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
