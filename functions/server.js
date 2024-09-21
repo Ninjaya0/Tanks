@@ -10,8 +10,9 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 app.use(express.json());
-const credentialsPath = path.join(__dirname, '../public/cred.json');
-const credentials = JSON.parse(fs.readFileSync(credentialsPath));
+// const credentialsPath = path.join(__dirname, 'cred.json');
+// const credentials = JSON.parse(fs.readFileSync(credentialsPath));
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 app.use(express.static(path.join(__dirname, '../public')));
 
 const auth = new google.auth.GoogleAuth({
