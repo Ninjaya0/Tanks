@@ -143,7 +143,7 @@ app.get('/men', (req, res) => {
 });
 
 app.get('/women', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/wo.html'));
+    res.sendFile(path.join(__dirname, 'wo.html'));
 });
 
 app.get('/policy', (req, res) => {
