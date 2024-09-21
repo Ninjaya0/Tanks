@@ -10,9 +10,9 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 app.use(express.json());
-const credentialsPath = path.join(__dirname, 'cred.json');
+const credentialsPath = path.join(__dirname, '../public/cred.json');
 const credentials = JSON.parse(fs.readFileSync(credentialsPath));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 const auth = new google.auth.GoogleAuth({
     credentials: credentials,
@@ -128,7 +128,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/men', (req, res) => {
-    res.sendFile(__dirname + '/men.html');
+    res.sendFile(path.join(__dirname, '../public/men.html'));
 });
 
 app.get('/women', (req, res) => {
@@ -136,11 +136,11 @@ app.get('/women', (req, res) => {
 });
 
 app.get('/policy', (req, res) => {
-    res.sendFile(__dirname + '/pol.html');
+    res.sendFile(path.join(__dirname, '../public/pol.html'));
 });
 
 app.get('/cart' , (req, res) => {
-    res.sendFile(__dirname + '/cart.html');
+    res.sendFile(path.join(__dirname, '../public/cart.html'));
 });
 
 app.post('/add-to-cart', async (req, res) => {
@@ -184,7 +184,7 @@ app.post('/add-to-cart', async (req, res) => {
 });
 
 app.get('/checkout', (req, res) => {
-    res.sendFile(__dirname + '/checkout.html');
+    res.sendFile(path.join(__dirname, '../public/checkout.html'));
 });
 
 app.get('/cart-data', (req, res) => {
