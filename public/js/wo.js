@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const productCard = clickedButton.closest('.product-card');
 
-            const productName = clickedButton.dataset.productName;
+            const productName = clickedButton.dataset.productName + " W";
             const productPrice = parseFloat(clickedButton.dataset.productPrice);
             const productSize = productCard.querySelector('.size-select').value;
             const productImage = productCard.querySelector('img').src;
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const productCard = clickedButton.closest('.product-card');
 
-            const productName = clickedButton.dataset.productName;
+            const productName = clickedButton.dataset.productName + " W";
             const productPrice = parseFloat(clickedButton.dataset.productPrice);
             const productSize = productCard.querySelector('.size-select').value;
             const productImage = productCard.querySelector('img').src;
