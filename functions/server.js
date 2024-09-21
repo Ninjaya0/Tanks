@@ -143,11 +143,11 @@ app.get('/men', (req, res) => {
 });
 
 app.get('/women', (req, res) => {
-    res.sendFile( path.join(__dirname, '..', 'public', 'wo.html'));
+    res.sendFile( path.join(__dirname, '..', 'women.html'));
 });
 
 app.get('/policy', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/pol.html'));
+    res.sendFile(path.join(__dirname, '../public/policy.html'));
 });
 
 app.get('/cart' , (req, res) => {
