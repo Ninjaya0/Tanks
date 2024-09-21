@@ -239,10 +239,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buyNowButtons.forEach(button => {
         button.addEventListener('click', (event) => {
-            const productName = this.dataset.productName;
-            const productPrice = parseFloat(this.dataset.productPrice);
+            const clickedButton = event.target;
+
+            const productCard = clickedButton.closest('.product-card');
+
+            const productName = clickedButton.dataset.productName;
+            const productPrice = parseFloat(clickedButton.dataset.productPrice);
             const productSize = productCard.querySelector('.size-select').value;
             const productImage = productCard.querySelector('img').src;
+            const quantityInput = productCard.querySelector('.quantity-input');
             const quantity = parseInt(quantityInput.value);
 
             fetch('/add-to-cart', {
@@ -259,10 +264,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             })
             .then(response => response.json())
+            .then(data => {
+                // Check if the operation was successful (optional)
+                if (data.success) {
+                    // Redirect to a different page
+                    window.location.href = '/cart';
+                } else {
+                    console.error('Error:', data.message);
+                }
+            })
             .catch(error => {
                 console.error('Error:', error);
             });
-            window.location.href = 'checkout';
+
         });
     });
 
