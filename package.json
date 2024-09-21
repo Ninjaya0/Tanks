@@ -12,7 +12,8 @@
 
 
 "scripts": {
-    "build": "netlify deploy --prod"
+    "build": "netlify deploy --prod",
+    "prepare": "cp functions/cred.json functions/cred.json"
 }
 
 
