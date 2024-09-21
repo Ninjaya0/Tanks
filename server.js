@@ -31,7 +31,7 @@ async function readSheet(spreadsheetId) {
     try {
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId,
-            range: 'Sheet1!A1:D10'
+            range: 'Sheet1!A1:E7'
         });
         const rows = response.data.values;
         return rows;
@@ -47,9 +47,11 @@ async function writeSheetStock(cart) {
     values.forEach(element => {
         cart.forEach(item => {
             if (element[0] === item.productName) {
-                if(item.productSize === "S") element[1] = parseInt(element[1]) - item.quantity;
-                if(item.productSize === "M") element[2] = parseInt(element[2]) - item.quantity;
-                if(item.productSize === "L") element[3] = parseInt(element[3]) - item.quantity;
+                console.log(item.productName + "size:" + item.productSize);
+                if(item.productSize === "XS") element[1] = parseInt(element[1]) - item.quantity;
+                if(item.productSize === "S") element[2] = parseInt(element[2]) - item.quantity;
+                if(item.productSize === "M") element[3] = parseInt(element[3]) - item.quantity;
+                if(item.productSize === "L") element[4] = parseInt(element[4]) - item.quantity;
             }
         });
     });
@@ -99,9 +101,10 @@ async function checkSheet(productName, productSize, quantity) {
     console.log(values);
     values.forEach(element => {
         if (element[0] === productName) {
-            if(productSize === "S" && parseInt(element[1]) < quantity) flag = false;
-            if(productSize === "M" && parseInt(element[2]) < quantity) flag = false;
-            if(productSize === "L" && parseInt(element[3]) < quantity) flag = false;
+            if(productSize === "XS" && parseInt(element[1]) < quantity) flag = false;
+            if(productSize === "S" && parseInt(element[2]) < quantity) flag = false;
+            if(productSize === "M" && parseInt(element[3]) < quantity) flag = false;
+            if(productSize === "L" && parseInt(element[4]) < quantity) flag = false;
         }
     });
     return flag;
@@ -266,14 +269,13 @@ app.post('/submit', async (req, res) => {
             <p style="color: #555;">We will notify you once your order has been shipped. If you have any questions, feel free to reply to this email.</p>
     
             <p style="text-align: center; padding: 10px; background-color: #f8f8f8; border-radius: 10px;">
-                <strong>Your Store Name</strong><br>
-                <a href="https://yourstore.com" style="color: #4CAF50; text-decoration: none;">Visit our website</a>
+                <strong>TanksEG</strong><br>
             </p>
         </div>
         `
     };
     await transporter.sendMail(mailOptions);
-    return res.json({ success: true });
+    res.redirect('/');
 });
 
 
