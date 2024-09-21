@@ -347,3 +347,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
 });
+
+
+function goBackOrRedirect() {
+    if (window.history.length > 1) {
+        window.history.back();  // Go to previous page
+    } else {
+        window.location.href = 'men';  // Fallback to 'men' page if no history
+    }
+}
