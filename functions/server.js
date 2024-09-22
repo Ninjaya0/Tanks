@@ -279,13 +279,14 @@ app.post('/submit', async (req, res) => {
             <h2 style="background-color: #4CAF50; color: white; padding: 10px; text-align: center; border-radius: 10px 10px 0 0;">Order Confirmation</h2>
             
             <p>Hi <strong>${name}</strong>,</p>
-            <p>Thank you for your order! We have received your purchase and are now processing it. Here are your order details:</p>
+            <p>Thank you for your order! The order will be shipped within 2-5 days. Here are your order details:</p>
     
             <div style="border: 1px solid #ddd; padding: 10px; margin: 20px 0;">
                 ${cartHtml}
+                Total: ${total.toFixed(2)} LE
             </div>
     
-            <p style="color: #555;">We will notify you once your order has been shipped. If you have any questions, feel free to reply to this email.</p>
+            <p style="color: #555;">If you have any questions, email:tanksegy@gmail.com.</p>
     
             <p style="text-align: center; padding: 10px; background-color: #f8f8f8; border-radius: 10px;">
                 <strong>TanksEG</strong><br>
