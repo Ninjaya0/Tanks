@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
             orderTotal += shippingFee;
 
             // Display the total with shipping
-            orderTotalElement.innerText = ${orderTotal.toFixed(2)} LE;
+            orderTotalElement.innerText = `${orderTotal.toFixed(2)} LE`;
         });
 });
 

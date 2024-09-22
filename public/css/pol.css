@@ -157,3 +157,6 @@ footer h3, footer p {
     align-items: center; /* Centers the links vertically, if needed */
     margin-top: 10px; /* Optional: Adds space above the menu */
 }
+.policies-list li{
+    text-align: left;
+}
