@@ -13,7 +13,7 @@
 //     });
 
 //     document.getElementById('checkout-btn').addEventListener('click', function() {
-//         window.location.href = 'checkout.html'; // Redirect to the checkout page
+//         window.location.href = 'checkouts.html'; // Redirect to the checkout page
 //     });
 // });
 
@@ -36,7 +36,7 @@
 //     });
 
 //     document.getElementById('checkout-btn').addEventListener('click', function() {
-//         window.location.href = 'checkout.html'; // Redirect to the checkout page
+//         window.location.href = 'checkouts.html'; // Redirect to the checkout page
 //     });
 // });
 
@@ -92,7 +92,7 @@
 
 //     // Checkout button event
 //     document.getElementById('checkout-btn').addEventListener('click', function() {
-//         window.location.href = 'checkout.html'; // Redirect to the checkout page
+//         window.location.href = 'checkouts.html'; // Redirect to the checkout page
 //     });
 // });
 
@@ -149,7 +149,7 @@
 
 //     // Checkout button event
 //     document.getElementById('checkout-btn').addEventListener('click', function() {
-//         window.location.href = 'checkout.html'; // Redirect to the checkout page
+//         window.location.href = 'checkouts.html'; // Redirect to the checkout page
 //     });
 // });
 

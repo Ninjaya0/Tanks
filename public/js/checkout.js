@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 const orderItem = document.createElement('div');
                 orderItem.classList.add('order-item');
                 orderItem.innerHTML = `
-//             <p>${item.productName} - Size: ${item.productSize} x ${item.quantity}</p>
-//             <p>${(item.productPrice * item.quantity).toFixed(2)} LE</p>
-//         `;
+             <p>${item.productName} - Size: ${item.productSize} x ${item.quantity}</p>
+             <p>${(item.productPrice * item.quantity).toFixed(2)} LE</p>
+         `;
                 orderItemsContainer.appendChild(orderItem);
 
                 orderTotal += item.productPrice * item.quantity;

@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //                 size: productSize,
 //                 image: productImage
 //             }]));
-//             window.location.href = 'checkout.html'; // Change this to your actual checkout page
+//             window.location.href = 'checkouts.html'; // Change this to your actual checkout page
 //         });
 //     });
 

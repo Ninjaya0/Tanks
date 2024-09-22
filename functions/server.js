@@ -195,7 +195,13 @@ app.post('/add-to-cart', async (req, res) => {
 });
 
 app.get('/checkout', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/checkout.html'));
+    if(!req.session.cart || req.session.cart.length === 0 ) {
+        res.redirect('/');
+    }
+    else{
+        res.redirect('/checkouts');
+    }
+
 });
 
 app.get('/cart-data', (req, res) => {
@@ -250,7 +256,7 @@ app.post('/submit', async (req, res) => {
     }
 
     let order = [name, email, phone, shipping];
-    let total = 0;
+    let total = 50;
     let str = "";
     let cartHtml = '<h3>Your Order:</h3><ul>';
     cart.forEach(item => {
