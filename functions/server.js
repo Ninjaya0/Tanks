@@ -7,13 +7,23 @@ const session = require('express-session');
 const { google } = require('googleapis');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
-const app2 = express();
-const app = express.Router();
+const app = express();
 
 app.use(express.json());
-const credentialsPath = path.join(__dirname, 'cred.json');
-const credentials = JSON.parse(fs.readFileSync(credentialsPath));
-app.use(express.static(path.join(__dirname, 'public')));
+const credentials = {
+    "type": "service_account",
+    "project_id": "serious-habitat-434821-m8",
+    "private_key_id": "741e67c30655bd16f3baae1634556a7e45cca593",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9Sip6bjazaQV0\nN6Zmz3DYN68VOPi4ElJo1gdXcUtAJ9mNJ5uOaibSBdGVZOXgHlMyuLkbrYVHiigM\na87BTsV1e5XggEby3VOwa12323ISiBJsEL4p+ZCUdPpW9Ygw9hetxjNFYW2yPKFN\no2bEPpu1s9Ja6WBqZkRvJzqBJ6wvqX86INsO/hr7r0jF5MGtUNK4mAD9HVzCBWme\nGd5kMaLTyzrjHGXKPwJAKQl1F5ewEZR/djApp/xt4ifpt9v0aTb6mghkJN2/wVZN\nCZNYXavWlkYlXSrAMt0m74K1qTEqzGDoOiEzNWEScPL8RxG3HS6NWi6EObX3zlcb\nOs+k9TKpAgMBAAECggEAD6BBXrM9uoSNTdVgvBy8i+rX3hyCgr6HdU5S05P/kmuf\nvNRz1dc7Pmv6y9aFGAHk3Btt84QY7CmSagkVy7UvHYZO3nY0dSzScW5BkbGQyokX\nXTqqGiC3H9xCxL426JTOKlsh5SS4d6Xj6nr2WzWwaLjwIO9iVVI9LMBcJuiRoSr8\nWv8/pEMaReKXxA2YCQPUydkU6kCIbcahdxxW/nt2Bo1vSMKv4CIktn8NhEuIJ455\nAQYggox2WN97GUg9zEGskrS+ybh4RuforukVlXCZg+/n2vTqSK/leKL7i8pMcIRv\ndVQFR9VH3+LxKnTSJnNQXtNaPh2rbxzhf/5rvmSvwQKBgQDmYQqzGZVUs9UZzv5S\nVgqpQA6KQ9Urr+8EK0qdmGYUmDSHw4iUpzIO07fWrNzYVsj5/PQxxqrw8YSXpc91\n5nL6j2lARB1l2IA12lCp++TkSmLoAuMNbrv1hFsFC6YvRnEME4K29cx13WOeyKIR\nOeuOa+0GQmRSwOu/looqAzH16QKBgQDSV0xdapmlrDo7tb43PU1sQjQZqWQsEF0L\nIqAeZdxpmf9LJif0FxuOU5fc731ndL7/eehHAC60cGVlZ98k4Qo9/GP/ozC2b1iR\nph2QiXgW7c4ajWeJVgWudG3DguX799idWiHrFXC9fU32uPo2P3rrNnqEAPCrmsKN\nQY91nj2ewQKBgQChcQO0eoshLlx5l4q1XEJgVNlbnyl1UfbnLwc85R0z9W1qbmX5\n9iioJ0m/EKg6mqaAOPlPIG+OJVHLi5CUiIeuem1Bcfo/8rX2ByVb2X+PU2l4OP2v\n3hetd7DpGj69BloWIl4JpLpBJoG3NdYMyFAAIDWbm07+ht8uBWqRAmgycQKBgGGU\n5nSgM8/MauewlSKDahvDSvBsyXA31zKHSclQcET9kJaIiRiQb9RDq7xvzrnkS4ey\nQrRNvV0wl5nH6pntXRcMtEewqbS5S1mmuyiG3hOlF2zyFQp9wf0BPrrpS1Dt1qyJ\nWBr7w2Xlb/n6Lvpj0N62U3hSB1VVYtStiaSDWQsBAoGBAK96asmM1FuExxhfC+iL\nlOATQtfPMIY7Edum9VKedBo0ZmBXd5KIbDZLVuWW196FuO9BHGuwTeZuE6BqbbQl\n9yNjXPSD17PFbtgWlux7RexXFjW6LUvIxDXT9tBR9wE61SptamaQoKb8dzbpLRyf\nMRY1ydtbtVLaOoH7zMEefE5I\n-----END PRIVATE KEY-----\n",
+    "client_email": "ziad-4@serious-habitat-434821-m8.iam.gserviceaccount.com",
+    "client_id": "111840960399587120318",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ziad-4%40serious-habitat-434821-m8.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+};
+app.use(express.static(path.join(__dirname, '../public')));
 
 const auth = new google.auth.GoogleAuth({
     credentials: credentials,
@@ -124,24 +134,24 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(  '../public/index.html');
 });
 
 
 app.get('/men', (req, res) => {
-    res.sendFile(__dirname + '/men.html');
+    res.sendFile(path.join(__dirname, '../public/men.html'));
 });
 
 app.get('/women', (req, res) => {
-    res.sendFile(__dirname + '/wo.html');
+    res.sendFile( path.join(__dirname, '..', 'women.html'));
 });
 
 app.get('/policy', (req, res) => {
-    res.sendFile(__dirname + '/pol.html');
+    res.sendFile(path.join(__dirname, '../public/policy.html'));
 });
 
 app.get('/cart' , (req, res) => {
-    res.sendFile(__dirname + '/cart.html');
+    res.sendFile(path.join(__dirname, '../public/cart.html'));
 });
 
 app.post('/add-to-cart', async (req, res) => {
@@ -185,7 +195,13 @@ app.post('/add-to-cart', async (req, res) => {
 });
 
 app.get('/checkout', (req, res) => {
-    res.sendFile(__dirname + '/checkout.html');
+    if(!req.session.cart || req.session.cart.length === 0 ) {
+        res.redirect('/');
+    }
+    else{
+        res.redirect('/checkouts');
+    }
+
 });
 
 app.get('/cart-data', (req, res) => {
@@ -240,7 +256,7 @@ app.post('/submit', async (req, res) => {
     }
 
     let order = [name, email, phone, shipping];
-    let total = 0;
+    let total = 50;
     let str = "";
     let cartHtml = '<h3>Your Order:</h3><ul>';
     cart.forEach(item => {
@@ -263,13 +279,14 @@ app.post('/submit', async (req, res) => {
             <h2 style="background-color: #4CAF50; color: white; padding: 10px; text-align: center; border-radius: 10px 10px 0 0;">Order Confirmation</h2>
             
             <p>Hi <strong>${name}</strong>,</p>
-            <p>Thank you for your order! We have received your purchase and are now processing it. Here are your order details:</p>
+            <p>Thank you for your order! The order will be shipped within 2-5 days. Here are your order details:</p>
     
             <div style="border: 1px solid #ddd; padding: 10px; margin: 20px 0;">
                 ${cartHtml}
+                Total: ${total.toFixed(2)} LE
             </div>
     
-            <p style="color: #555;">We will notify you once your order has been shipped. If you have any questions, feel free to reply to this email.</p>
+            <p style="color: #555;">If you have any questions, email:tanksegy@gmail.com.</p>
     
             <p style="text-align: center; padding: 10px; background-color: #f8f8f8; border-radius: 10px;">
                 <strong>TanksEG</strong><br>
@@ -286,5 +303,4 @@ app.post('/submit', async (req, res) => {
 //     console.log('Server is running on http://localhost:3001');
 // });
 
-app2.use("/.netlify/functions/app", app);
-module.exports.handler = serverless(app2);
+module.exports.handler = serverless(app);
